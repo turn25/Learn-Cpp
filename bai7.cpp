@@ -5,7 +5,7 @@ int main()
 {
     float C;
     cin>>C;
-    float F=9/5*C+32;
+    float F=9.0/5*C+32;
     cout<<F;
     return 0;
 }

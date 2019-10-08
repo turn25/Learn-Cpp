@@ -1,5 +1,6 @@
-// S=1+1/2+1/3+...+1/n
+// S(n)=sqrt(2+sqrt(2+...+sqrt(2)))
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main()
 {
@@ -7,10 +8,10 @@ int main()
     cin>>n;
     float S=0;
     int i=1;
-    while (i<=n)
+    while(i<=n)
     {
-        S=S+1.0/i;
-        i=i+1;
+        S=sqrt(2+S);
+	i++;
     }
     cout<<S;
     return 0;
