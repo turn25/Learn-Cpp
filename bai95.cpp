@@ -11,7 +11,7 @@ int main()
     while(i>=1)
     {
         S=sqrt(i+S);
-	i--;
+	    i--;
     }
     cout<<S;
     return 0;
