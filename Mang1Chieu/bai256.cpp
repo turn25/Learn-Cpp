@@ -44,6 +44,6 @@ void sapxepgiam(int a[], int n)
                 a[j]=temp;
             }    
     }
-    cout<<"duoc sap xep tang dan thanh: ";
+    cout<<"duoc sap xep giam dan thanh: ";
     xuat(a,n);
 }
