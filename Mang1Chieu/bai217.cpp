@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
-void nhap(float[], int &);
-void tong(float[], int);
+void nhap(int[], int &);
+void demchiahetbay(int[], int);
 int main()
 {
-    float a[50];
+    int a[50];
     int n;
     nhap(a, n);
-    tong(a, n);
+    demchiahetbay(a, n);
     return 0;
 }
-void nhap(float a[], int &n)
+void nhap(int a[], int &n)
 {
     do
     {
@@ -23,13 +23,13 @@ void nhap(float a[], int &n)
         cin >> a[i];
     }
 }
-void tong(float a[], int n)
+void demchiahetbay(int a[], int n)
 {
-    float s = 0;
+    int dem=0;
     for (int i = 0; i < n; i++)
     {
-        if (a[i]>abs(a[i+1]))
-            s=s+a[i];
+        if(a[i]%7==0)
+            dem++;
     }
-    cout<<"Tong la: "<<s<<endl;
+    cout<<"So luong so chia het cho 7 la: "<<dem<<endl;
 }

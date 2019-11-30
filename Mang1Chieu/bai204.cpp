@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
-void nhap(int[], int &);
-void tong(int[], int);
+void nhap(float[], int &);
+void tong(float[], int);
 int main()
 {
-    int a[50];
+    float a[50];
     int n;
     nhap(a, n);
     tong(a, n);
     return 0;
 }
-void nhap(int a[], int &n)
+void nhap(float a[], int &n)
 {
     do
     {
@@ -23,7 +23,7 @@ void nhap(int a[], int &n)
         cin >> a[i];
     }
 }
-void tong(int a[], int n)
+void tong(float a[], int n)
 {
     float s = 0;
     for (int i = 1; i < n; i++)

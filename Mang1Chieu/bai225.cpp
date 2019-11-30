@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 void nhap(float[], int &);
-void tong(float[], int);
+void demgtln(float[], int);
 int main()
 {
     float a[50];
     int n;
     nhap(a, n);
-    tong(a, n);
+    demgtln(a, n);
     return 0;
 }
 void nhap(float a[], int &n)
@@ -23,13 +23,18 @@ void nhap(float a[], int &n)
         cin >> a[i];
     }
 }
-void tong(float a[], int n)
+void demgtln(float a[], int n)
 {
-    float s = 0;
+    int dem = 0;
+    int ln=0;
     for (int i = 0; i < n; i++)
     {
-        if (a[i]>abs(a[i+1]))
-            s=s+a[i];
+        if(ln<a[i])
+            ln=a[i];
     }
-    cout<<"Tong la: "<<s<<endl;
+    for (int i=0; i<n;i++)
+    {    if(ln==a[i])
+            dem++;
+    }
+    cout << "So luong cac gia tri lon nhat la : " << dem << endl;
 }
